@@ -21,6 +21,7 @@ Each file contains a complete, runnable example with:
 | **LinkedList** | Music Playlist | Frequent add/remove operations |
 | **Stack** | Browser History (Back button) | Last-in, first-out (LIFO) |
 | **Queue** | Customer Service Line | First-in, first-out (FIFO) |
+| **ArrayDeque** | Photo Editor Undo/Redo | Double-ended operations (both ends) |
 | **HashMap** | Phone Book | Fast lookups by key |
 | **HashSet** | Unique Visitors | Storing unique items only |
 
@@ -108,7 +109,24 @@ java datastructures.QueueExample
 
 ---
 
-### 6. **HashMapExample.java** - Phone Book
+### 6. **ArrayDequeExample.java** - Photo Editor Undo/Redo
+↔️ **Scenario**: Photo editor with undo and redo functionality
+
+**What you'll learn**:
+- ArrayDeque is a Double-Ended Queue (add/remove from both ends)
+- Can work as both Stack (LIFO) and Queue (FIFO)
+- Faster than Stack and LinkedList
+- Perfect for undo/redo, task prioritization
+
+**Run it**:
+```bash
+javac datastructures/ArrayDequeExample.java
+java datastructures.ArrayDequeExample
+```
+
+---
+
+### 7. **HashMapExample.java** - Phone Book
 📞 **Scenario**: Storing names and phone numbers for quick lookup
 
 **What you'll learn**:
@@ -124,7 +142,7 @@ java datastructures.HashMapExample
 
 ---
 
-### 7. **HashSetExample.java** - Unique Visitors
+### 8. **HashSetExample.java** - Unique Visitors
 👤 **Scenario**: Tracking unique website visitors
 
 **What you'll learn**:
@@ -152,6 +170,8 @@ java datastructures.HashSetExample
 - **From beginning/end** → Use **LinkedList**
 - **From top only (LIFO)** → Use **Stack**
 - **From front/back (FIFO)** → Use **Queue**
+- **From both ends** → Use **ArrayDeque**
+- **Need undo/redo** → Use **ArrayDeque**
 
 ### Need to look up items?
 - **By unique key** → Use **HashMap**
@@ -184,6 +204,12 @@ java datastructures.HashSetExample
 - Automatically removes repeated items
 - Used in: HashSet
 
+### 5. **Double-Ended (Deque)**
+- Can add/remove from both front AND back
+- Combines Stack and Queue capabilities
+- More efficient than Stack or LinkedList
+- Used in: ArrayDeque, undo/redo systems
+
 ---
 
 ## Learning Path
@@ -193,9 +219,10 @@ java datastructures.HashSetExample
 1. Start with **Array** - simplest to understand
 2. Move to **ArrayList** - see how flexibility helps
 3. Try **Stack** and **Queue** - learn about ordering
-4. Explore **HashMap** - understand key-value pairs
-5. Practice **HashSet** - work with unique items
-6. Finally **LinkedList** - understand internal structure
+4. Learn **ArrayDeque** - understand double-ended operations
+5. Explore **HashMap** - understand key-value pairs
+6. Practice **HashSet** - work with unique items
+7. Finally **LinkedList** - understand internal structure
 
 ---
 
@@ -213,6 +240,7 @@ java datastructures.ArrayListExample
 java datastructures.LinkedListExample
 java datastructures.StackExample
 java datastructures.QueueExample
+java datastructures.ArrayDequeExample
 java datastructures.HashMapExample
 java datastructures.HashSetExample
 ```
@@ -246,6 +274,17 @@ java datastructures.HashSetExample
 **Q: When should I use LinkedList instead of ArrayList?**
 - LinkedList: When you frequently add/remove from beginning or middle
 - ArrayList: When you mostly read/access items by index
+
+**Q: ArrayDeque vs Stack vs Queue?**
+- ArrayDeque: Fastest, works as both Stack and Queue, add/remove from both ends
+- Stack: Only LIFO operations (but ArrayDeque is faster)
+- Queue: Only FIFO operations (but ArrayDeque is more flexible)
+
+**Q: When should I use ArrayDeque?**
+- Undo/Redo functionality
+- Need both stack and queue operations
+- Want better performance than Stack or LinkedList
+- Task prioritization (urgent tasks to front, normal to back)
 
 ---
 
